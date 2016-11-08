@@ -1,0 +1,30 @@
+<html>  
+  <head>
+    <meta charset="utf-8">
+    <title>盆栽狀態</title>
+  </head>
+  <body>
+    <table width="550" border="1">
+      <tr>
+        <th id="uid">代號</th>
+        <th id="temperature">溫度</th>
+        <th id="humidity">濕度</th>
+        <th id="water">水位</th>
+        <th id="brightness">亮度</th>
+      </tr>
+    
+      <% for(var i=0; i<data.length; i++) { %>
+        <tr align="center">
+          <td headers="uid"> <%= data[i].uid %> </td>
+          <td headers="temperature"> <%= data[i].temperature %> </td>
+          <td headers="humidity"> <%= data[i].humidity %> </td>
+          <td headers="water"> <%= data[i].water %> </td>
+          <td headers="brightness"> <%= data[i].brightness %> </td>
+        </tr>
+      <% } %>
+    </table>
+    <form method="get" action="/home" style="display:inline">
+      <button type="submit">返回首頁</button>
+    </form>
+  </body>
+</html>
